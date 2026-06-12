@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+/* Navbar */
+.navbar { background-color: #4a2c0a; }
+.navbar-brand { color: #f5c97a !important; font-weight: bold; font-size: 1.3rem; }
+.nav-link { color: #fff !important; }
+.nav-link:hover, .nav-link.active { color: #f5c97a !important; }
+
+/* Hero */
+.hero {
+  background-color: #6b3f1f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+.hero p  { font-size: 1rem; margin-bottom: 20px; }
+
+/* Page header */
+.page-header {
+  background-color: #6b3f1f;
+  color: white;
+  padding: 40px 20px;
+}
+.page-header h1 { margin: 0; }
+
+/* Buttons */
+.btn-coffee {
+  background-color: #c8943a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-coffee:hover { background-color: #a07030; color: white; }
+
+/* Cards */
+.card { border: 1px solid #ddd; border-radius: 8px; background: white; }
+.card-title { color: #4a2c0a; font-weight: bold; }
+.price { color: #c8943a; font-weight: bold; font-size: 1.1rem; }
+
+/* Form */
+.form-section { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.form-label { font-weight: bold; color: #4a2c0a; }
+
+/* Footer */
+footer {
+  background-color: #4a2c0a;
+  color: #f5deb3;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+footer a { color: #f5c97a; text-decoration: none; }
+footer h6 { color: #f5c97a; }
+
+/* Section spacing */
+.section { padding: 40px 0; }

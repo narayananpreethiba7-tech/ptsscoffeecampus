@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PTSS Coffee Campus – Book a Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">☕ PTSS Coffee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="content.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="form.html">Book a Table</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Book a Table</h1>
+      <p class="mb-0 mt-1">Reserve your spot at PTSS Coffee Campus.</p>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-7">
+          <div class="form-section">
+            <h4 class="mb-4" style="color:#4a2c0a;">Reservation Form</h4>
+
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name *</label>
+              <input type="text" id="name" class="form-control" placeholder="e.g. Ahmad Razif" />
+            </div>
+
+            <!-- Matric No -->
+            <div class="mb-3">
+              <label for="matric" class="form-label">Matric / Staff No. *</label>
+              <input type="text" id="matric" class="form-control" placeholder="e.g. DFK20013" />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" id="email" class="form-control" placeholder="you@ptss.edu.my" />
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="01X-XXXXXXX" />
+            </div>
+
+            <!-- Date & Time -->
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="date" class="form-label">Date *</label>
+                <input type="date" id="date" class="form-control" />
+              </div>
+              <div class="col-6">
+                <label for="time" class="form-label">Time *</label>
+                <input type="time" id="time" class="form-control" />
+              </div>
+            </div>
+
+            <!-- Guests -->
+            <div class="mb-3">
+              <label for="guests" class="form-label">Number of Guests *</label>
+              <input type="number" id="guests" class="form-control" min="1" max="20" placeholder="1 – 20" />
+            </div>
+
+            <!-- Table Type -->
+            <div class="mb-3">
+              <label for="tableType" class="form-label">Table Preference</label>
+              <select id="tableType" class="form-select">
+                <option value="">-- Select --</option>
+                <option value="study">Study Zone (Quiet)</option>
+                <option value="group">Group Discussion Area</option>
+                <option value="outdoor">Outdoor Terrace</option>
+                <option value="any">No Preference</option>
+              </select>
+            </div>
+
+            <!-- Drinks Checkbox -->
+            <div class="mb-3">
+              <label class="form-label">Pre-Order Drinks (optional)</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="latte" />
+                <label class="form-check-label" for="latte">Caramel Latte</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="teh" />
+                <label class="form-check-label" for="teh">Teh Tarik</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="matcha" />
+                <label class="form-check-label" for="matcha">Matcha Shake</label>
+              </div>
+            </div>
+
+            <!-- Dietary Radio -->
+            <div class="mb-3">
+              <label class="form-label">Dietary Requirement</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="diet" id="dietNone" checked />
+                <label class="form-check-label" for="dietNone">None</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="diet" id="dietVeg" />
+                <label class="form-check-label" for="dietVeg">Vegetarian</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="diet" id="dietVegan" />
+                <label class="form-check-label" for="dietVegan">Vegan</label>
+              </div>
+            </div>
+
+            <!-- Special Request -->
+            <div class="mb-3">
+              <label for="notes" class="form-label">Special Requests</label>
+              <textarea id="notes" class="form-control" rows="3" placeholder="Any special arrangements..."></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="terms" />
+              <label class="form-check-label" for="terms">
+                I agree to the booking terms and conditions. *
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="button" class="btn-coffee w-100 py-2" onclick="submitForm()">
+              Confirm Reservation
+            </button>
+
+          </div><!-- end form-section -->
+
+          <!-- Success Message -->
+          <div id="successMsg" class="d-none text-center mt-4 p-4"
+               style="background:white;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="font-size:3rem;">✅</div>
+            <h4 style="color:#4a2c0a;margin-top:1rem;">Booking Confirmed!</h4>
+            <p class="text-muted">Thank you! We'll see you at PTSS Coffee Campus.</p>
+            <a href="index.html" class="btn-coffee mt-2">Back to Home</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <h6>☕ PTSS Coffee Campus</h6>
+          <p>On-campus café at PTSS, Arau, Perlis.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6>Pages</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="content.html">Menu</a></li>
+            <li><a href="form.html">Book a Table</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6>Contact</h6>
+          <p>011-2345 6789<br>coffee@ptss.edu.my</p>
+        </div>
+      </div>
+      <p class="mt-3 mb-0" style="font-size:0.8rem;">&copy; 2026 PTSS Coffee Campus. DFK20013 Practical Work.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function submitForm() {
+      const name   = document.getElementById('name').value.trim();
+      const matric = document.getElementById('matric').value.trim();
+      const email  = document.getElementById('email').value.trim();
+      const date   = document.getElementById('date').value;
+      const time   = document.getElementById('time').value;
+      const guests = document.getElementById('guests').value;
+      const terms  = document.getElementById('terms').checked;
+
+      if (!name || !matric || !email || !date || !time || !guests) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      if (!terms) {
+        alert('Please agree to the terms and conditions.');
+        return;
+      }
+
+      document.querySelector('.form-section').classList.add('d-none');
+      document.getElementById('successMsg').classList.remove('d-none');
+    }
+  </script>
+</body>
+</html>
